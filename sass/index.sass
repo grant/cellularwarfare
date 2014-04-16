@@ -3,6 +3,7 @@
 $BLUE: rgb(145, 207, 215)
 $DARK_BLUE: rgb(73, 161, 167)
 $WHITE: rgb(255, 255, 255)
+$BLACK: rgb(24, 24, 24)
 
 $FONT_MEDIUM: 26px
 $FONT_LARGE: 40px
@@ -52,9 +53,32 @@ body
 .rightArea
   position: relative
   width: 66.6%
-  background-color: black
+  background-color: $BLACK
   .swf
     transition: all 100ms
 .leftArea, .rightArea
   float: left
   height: 100%
+
+.closeButton
+  $size: 4%
+  position: absolute
+  width: $size
+  overflow: hidden
+  &:before
+    content: ""
+    display: block
+    padding-top: 100%
+  .content
+    overflow: hidden
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    padding: 10% 15%
+    background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.3) 50%, transparent 50%)
+    user-select: none
+    z-index: 100
+    color: $BLACK
+    cursor: pointer
