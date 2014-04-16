@@ -1,0 +1,52 @@
+@import reset
+
+$BLUE: rgb(145, 207, 215)
+$DARK_BLUE: rgb(73, 161, 167)
+$WHITE: rgb(255, 255, 255)
+
+$FONT_MEDIUM: 26px
+$FONT_LARGE: 40px
+
+body
+  font-family: 'Helvetica Neue Thin', 'HelveticaNeue-Thin', 'helvetica neue', helvetica, arial, 'lucida grande', sans-serif
+
+.leftArea
+  background-color: $DARK_BLUE
+  color: $WHITE
+  .githubLink:hover
+    color: $BLUE
+  overflow-y: auto
+  width: 33.3%
+  padding: 1.5% 2%
+  .name
+    font-size: $FONT_LARGE
+  .description
+    font-style: italic
+  .description, .instructions
+    font-weight: 100
+    color: $BLUE
+  .instructions, .devnotes
+    padding-top: 2%
+    ul
+      color: $BLUE
+      font-size: $FONT_MEDIUM
+      list-style: disc
+      margin-left: 30px
+      li
+        padding-top: 1%
+    .title
+      font-size: $FONT_MEDIUM
+      font-weight: 700
+      color: $WHITE
+  .githubLink
+    display: block
+  .description, .instructions, .githubLink
+    font-size: $FONT_MEDIUM
+    padding-top: 3%
+.rightArea
+  position: relative
+  width: 66.6%
+  background-color: black
+.leftArea, .rightArea
+  float: left
+  height: 100%
