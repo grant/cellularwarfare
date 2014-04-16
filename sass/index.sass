@@ -9,12 +9,11 @@ $FONT_LARGE: 40px
 
 body
   font-family: 'Helvetica Neue Thin', 'HelveticaNeue-Thin', 'helvetica neue', helvetica, arial, 'lucida grande', sans-serif
+  line-height: 1.2
 
 .leftArea
   background-color: $DARK_BLUE
   color: $WHITE
-  .githubLink:hover
-    color: $BLUE
   overflow-y: auto
   width: 33.3%
   padding: 1.5% 2%
@@ -39,7 +38,14 @@ body
       font-weight: 700
       color: $WHITE
   .githubLink
-    display: block
+    display: inline-block
+    color: $WHITE
+    padding-bottom: 5px
+    border-bottom: 1px $WHITE solid
+    transition: color 200ms, border-bottom-color 200ms
+    &:hover
+      color: $BLUE
+      border-bottom-color: $BLUE
   .description, .instructions, .githubLink
     font-size: $FONT_MEDIUM
     padding-top: 3%
@@ -47,6 +53,8 @@ body
   position: relative
   width: 66.6%
   background-color: black
+  .swf
+    transition: all 100ms
 .leftArea, .rightArea
   float: left
   height: 100%
